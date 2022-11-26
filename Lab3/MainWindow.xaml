@@ -1,0 +1,76 @@
+﻿<Window x:Class="Lab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <DockPanel>
+          
+            <Grid DockPanel.Dock="Bottom">
+             
+
+                <Grid x:Name="HotelPage" Visibility="Visible">
+                    <DataGrid x:Name="HTab" HorizontalAlignment="Left" AutoGenerateColumns="True" Width="500" SelectedCellsChanged="HTab_SelectedCellsChanged" IsReadOnly="True"/>
+                    <Grid HorizontalAlignment="Right" Width="300">
+
+                        <Grid VerticalAlignment="Top" Height="100">
+                            <Grid>
+                                <Label Content="ID" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.517,0.838"></Label>
+                            </Grid>
+                            <Grid Height="70" VerticalAlignment="Top">
+                                <TextBox x:Name="Id_Acc" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="150" Height="30" FontSize="25" Margin="75,0"/>
+                            </Grid>
+                        </Grid>
+                        
+                        <Grid VerticalAlignment="Top" Height="165">
+                            <Grid>
+                                <Label Content="Name" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="120,59,116,0"></Label>
+                            </Grid>
+                            <Grid Height="70" VerticalAlignment="Top">
+                                <TextBox x:Name="Name" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="150" Height="30" FontSize="25" Margin="76,0,74,-50"/>
+                            </Grid>
+                        </Grid>
+
+                        <Grid VerticalAlignment="Top" Height="222">
+                            <Grid Height="100" VerticalAlignment="Bottom">
+                                <Label Content="Address" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"></Label>
+                                <TextBox x:Name="Address" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="30" FontSize="25"/>
+                            </Grid>
+                        </Grid>
+
+                        <Grid VerticalAlignment="Top" Height="280">
+                            <Grid Height="100" VerticalAlignment="Bottom">
+                                <Label Content="Price" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"></Label>
+                                <TextBox x:Name="Price" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="30" FontSize="25"/>
+                            </Grid>
+                        </Grid>
+
+                        <Grid VerticalAlignment="Top" Height="340">
+                            <Grid Height="100" VerticalAlignment="Bottom">
+                                <Label Content="Type" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"></Label>
+                                <TextBox x:Name="Type" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="30" FontSize="25"/>
+                            </Grid>
+                        </Grid>
+
+
+                        <Grid VerticalAlignment="Bottom" Height="30">
+                            <DockPanel>
+                                <Button DockPanel.Dock="Left" Content="Delete" FontSize="25" Width="100" Click="DeleteStudent_Button"/>
+                                <Button Content="Change" FontSize="25" Width="100" Click="ChangeStudent_Button"/>
+                                <Button DockPanel.Dock="Right" Content="Add" FontSize="25" Click="AddStudent_Button"/>
+                            </DockPanel>
+                        </Grid>
+
+                    </Grid>
+                </Grid>
+
+                
+            </Grid>
+        </DockPanel>
+
+    </Grid>
+</Window>
